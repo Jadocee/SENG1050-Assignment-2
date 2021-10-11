@@ -1,35 +1,36 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE car_list [
     <!--    Filename:   category_1_Tesla.xml
             Author:     Jaydon Cameron
+            Validator:  https://www.xmlvalidation.com/
             Created:    03/09/2021      -->
 
-    <!ELEMENT car_list (car+)>              <!--Element (or tag) containing one or more car elements.-->
+    <!ELEMENT car_list (car+)>                      <!--Element (or tag) containing one or more car elements.-->
         <!ELEMENT car (make,model,specs,description,cost,safetyRating,extras+,couponCode?,reviews?,externalPromoPage+,promoPicFile)>  <!--Element containing information about a car.-->
-            <!ELEMENT make (#PCDATA)>
-            <!ELEMENT model (#PCDATA)>              <!--Model element with parsed character data.-->
-            <!ELEMENT specs (type,range,topSpeed,zeroToHundred)>    <!--Description element with parsed character data.-->
+            <!ELEMENT make (#PCDATA)>               <!-- Element containing the make of the car. -->
+            <!ELEMENT model (#PCDATA)>              <!-- Model element with parsed character data.-->
+            <!ELEMENT specs (type,range,topSpeed,zeroToHundred)>        <!-- Description element with parsed character data. -->
             <!ELEMENT description (#PCDATA)>        <!-- Description of the car. -->
             <!ELEMENT range (#PCDATA)>              <!-- Driving range of the car (in kilometers). -->
             <!ELEMENT topSpeed (#PCDATA)>           <!-- Top speed of the car (in kilometers per hour). -->
             <!ELEMENT type (#PCDATA)>               <!-- The engine/fuel type of the car. -->
             <!ELEMENT zeroToHundred (#PCDATA)>      <!-- The time it take for the car to reach 100 km/h. -->
-            <!ELEMENT cost (#PCDATA)>               <!--Cost element for the cost to purchase the car, with parsed character data.-->
-            <!ELEMENT safetyRating (#PCDATA)>       <!--safetyRating element for the safety rating of the car, with parsed character data.-->
-                <!ATTLIST safetyRating stars (0|1|2|3|4|5) #REQUIRED> <!-- The safety rating of the car according to ANCAP (out of five). -->
-            <!ELEMENT extras (option, additionalCost)>             <!--extras element for additional options that can be chosen to add with the car purchase, containing one or more option.-->
-                <!ELEMENT option (#PCDATA)>                <!--option element with parsed character data.-->
-                <!ELEMENT additionalCost (#PCDATA)>
-            <!ELEMENT couponCode (#PCDATA)>         <!--couponCode element with parsed character data.-->
-            <!ELEMENT reviews (review*)>            <!--reviews element containing zero or more review attributes.-->
-                <!ELEMENT review (#PCDATA)>             <!--review element for a person's review of the car, with parsed character data.-->
-        <!ELEMENT externalPromoPage (#PCDATA)>  <!--URL of the cars promotional page.-->
-        <!ELEMENT promoPicFile (#PCDATA)>       <!--Image file of the cars promotional image.-->
+            <!ELEMENT cost (#PCDATA)>               <!-- Cost element for the cost to purchase the car, with parsed character data. -->
+            <!ELEMENT safetyRating (#PCDATA)>       <!-- safetyRating element for the safety rating of the car, with parsed character data.-->
+                <!ATTLIST safetyRating stars (0|1|2|3|4|5) #REQUIRED>   <!-- The safety rating of the car according to ANCAP (out of five). -->
+            <!ELEMENT extras (option, additionalCost)>                  <!-- extras element for additional options that can be chosen to add with the car purchase, containing one or more option. -->
+                <!ELEMENT option (#PCDATA)>         <!-- option element with parsed character data. -->
+                <!ELEMENT additionalCost (#PCDATA)> <!-- The cost to add the option to the car. -->
+            <!ELEMENT couponCode (#PCDATA)>         <!-- couponCode element with parsed character data. -->
+            <!ELEMENT reviews (review*)>            <!-- reviews element containing zero or more review attributes. -->
+                <!ELEMENT review (#PCDATA)>         <!-- review element for a person's review of the car, with parsed character data. -->
+            <!ELEMENT externalPromoPage (#PCDATA)>  <!-- URL of the cars promotional page. -->
+            <!ELEMENT promoPicFile (#PCDATA)>       <!-- Image file of the cars promotional image. -->
 
     <!-- Entities for the car models. -->
-    <!ENTITY MOD-3 "Model3">
-    <!ENTITY MOD-S "ModelS">
-    <!ENTITY MOD-X "ModelX">
+    <!ENTITY MOD-3 "Model3">    <!-- Entity 1 -->
+    <!ENTITY MOD-S "ModelS">    <!-- Entity 2 -->
+    <!ENTITY MOD-X "ModelX">    <!-- Entity 3 -->
 ]>
 
 <car_list>                                          <!-- List of cars. -->
@@ -95,7 +96,7 @@
         <extras>                                    <!-- Second extra. -->
             <option>Plaid</option>
             <additionalCost>45000</additionalCost>
-        </extras>                                   <!-- Third extra. -->
+        </extras>
         <couponCode></couponCode>                   <!-- The coupon code that can be used with the purchase of this car. -->
         <reviews>                                   <!-- List of reviews of the car. -->
             <review></review>                       <!-- Review of the car. -->
@@ -105,36 +106,36 @@
     </car>
 
     <!-- Third car. -->
-    <car>
-        <make>Tesla</make>
-        <model>&MOD-X;</model>
-        <specs>
-            <type>electric</type>
-            <range>547 km (est.)</range>
-            <topSpeed>262 km/h</topSpeed>
-            <zeroToHundred>2.6 s</zeroToHundred>
+    <car>                                           <!-- Information for a car. -->
+        <make>Tesla</make>                          <!-- Make of the car. -->
+        <model>&MOD-X;</model>                      <!-- Model of the car (uses an entity). -->
+        <specs>                                     <!-- List of specs of the car. -->
+            <type>electric</type>                   <!-- Fuel/Engine type of the car. -->
+            <range>547 km (est.)</range>            <!-- Driving range of the car (in km) -->
+            <topSpeed>262 km/h</topSpeed>           <!-- Top speed of the car (in km/h) -->
+            <zeroToHundred>2.6 s</zeroToHundred>    <!-- Zero to one hundred time of the car (in s) -->
         </specs>
-        <description>
+        <description>                               <!-- Description of the car. -->
             With the most storage space and towing capacity of any electric SUV, and seating for up to
             seven adults, Model X delivers maximum utility. Front doors open and close automatically,
             Falcon Wing doors allow for easier loading and a standard trailer hitch lets you bring your
             gear anywhere you go.
         </description>
-        <cost>161990</cost>
-        <safetyRating stars="5"/>
-        <extras>
-            <option>Long Range</option>
-            <additionalCost>Included with the car.</additionalCost>
+        <cost>161990</cost>                         <!-- Base price to purchase the car. -->
+        <safetyRating stars="5"/>                   <!-- Safety rating of the car on a scale from 0 to 5 stars. -->
+        <extras>                                    <!-- Extras available for the car. -->
+            <option>Long Range</option>             <!-- The name of the option available. -->
+            <additionalCost>Included with the car.</additionalCost> <!-- The additional cost of the option. -->
         </extras>
-        <extras>
+        <extras>                                    <!-- Second extra. -->
             <option>Plaid</option>
             <additionalCost>13000</additionalCost>
         </extras>
-        <couponCode></couponCode>
-        <reviews>
-            <review></review>
+        <couponCode></couponCode>                   <!-- The coupon code that can be used with the purchase of this car. -->
+        <reviews>                                   <!-- List of reviews of the car. -->
+            <review></review>                       <!-- Review of the car. -->
         </reviews>
-        <externalPromoPage>https://www.tesla.com/en_au/modelx</externalPromoPage>
-        <promoPicFile>images\MX-Hero-Desktop.jpg</promoPicFile>
+        <externalPromoPage>https://www.tesla.com/en_au/modelx</externalPromoPage>   <!-- URL to the promotional page for this vehicle. -->
+        <promoPicFile>images\MX-Hero-Desktop.jpg</promoPicFile>                     <!-- The relative path (or filename) of a promotional picture of this vehicle. -->
     </car>
 </car_list>

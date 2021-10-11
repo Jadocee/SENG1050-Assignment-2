@@ -2,130 +2,134 @@
 <!DOCTYPE car_list [
     <!--    Filename:   category_2_Volkswagen.xml
             Author:     Jaydon Cameron
+            Validator:  https://www.xmlvalidation.com/
             Created:    03/09/2021      -->
 
-    <!ELEMENT car_list (car+)>              <!--Element (or tag) containing one or more car elements.-->
+    <!ELEMENT car_list (car+)>                      <!--Element (or tag) containing one or more car elements.-->
         <!ELEMENT car (make,model,specs,description,cost,safetyRating,extras+,couponCode?,reviews?,externalPromoPage+,promoPicFile)>  <!--Element containing information about a car.-->
-            <!ELEMENT make (#PCDATA)>
-            <!ELEMENT model (#PCDATA)>              <!--Model element with parsed character data.-->
-            <!ELEMENT specs (type,range,topSpeed,zeroToHundred)>    <!--Description element with parsed character data.-->
+            <!ELEMENT make (#PCDATA)>               <!-- Element containing the make of the car. -->
+            <!ELEMENT model (#PCDATA)>              <!-- Model element with parsed character data.-->
+            <!ELEMENT specs (type,range,topSpeed,zeroToHundred)>        <!-- Description element with parsed character data. -->
             <!ELEMENT description (#PCDATA)>        <!-- Description of the car. -->
             <!ELEMENT range (#PCDATA)>              <!-- Driving range of the car (in kilometers). -->
             <!ELEMENT topSpeed (#PCDATA)>           <!-- Top speed of the car (in kilometers per hour). -->
             <!ELEMENT type (#PCDATA)>               <!-- The engine/fuel type of the car. -->
             <!ELEMENT zeroToHundred (#PCDATA)>      <!-- The time it take for the car to reach 100 km/h. -->
-            <!ELEMENT cost (#PCDATA)>               <!--Cost element for the cost to purchase the car, with parsed character data.-->
-            <!ELEMENT safetyRating (#PCDATA)>       <!--safetyRating element for the safety rating of the car, with parsed character data.-->
-                <!ATTLIST safetyRating stars (0|1|2|3|4|5) #REQUIRED> <!-- The safety rating of the car according to ANCAP (out of five). -->
-            <!ELEMENT extras (option, additionalCost)>             <!--extras element for additional options that can be chosen to add with the car purchase, containing one or more option.-->
-                <!ELEMENT option (#PCDATA)>                <!--option element with parsed character data.-->
-                <!ELEMENT additionalCost (#PCDATA)>
-            <!ELEMENT couponCode (#PCDATA)>         <!--couponCode element with parsed character data.-->
-            <!ELEMENT reviews (review*)>            <!--reviews element containing zero or more review attributes.-->
-                <!ELEMENT review (#PCDATA)>             <!--review element for a person's review of the car, with parsed character data.-->
-        <!ELEMENT externalPromoPage (#PCDATA)>  <!--URL of the cars promotional page.-->
-        <!ELEMENT promoPicFile (#PCDATA)>       <!--Image file of the cars promotional image.-->
+            <!ELEMENT cost (#PCDATA)>               <!-- Cost element for the cost to purchase the car, with parsed character data. -->
+            <!ELEMENT safetyRating (#PCDATA)>       <!-- safetyRating element for the safety rating of the car, with parsed character data.-->
+                <!ATTLIST safetyRating stars (0|1|2|3|4|5) #REQUIRED>   <!-- The safety rating of the car according to ANCAP (out of five). -->
+            <!ELEMENT extras (option, additionalCost)>                  <!-- extras element for additional options that can be chosen to add with the car purchase, containing one or more option. -->
+                <!ELEMENT option (#PCDATA)>         <!-- option element with parsed character data. -->
+                <!ELEMENT additionalCost (#PCDATA)> <!-- The cost to add the option to the car. -->
+            <!ELEMENT couponCode (#PCDATA)>         <!-- couponCode element with parsed character data. -->
+            <!ELEMENT reviews (review*)>            <!-- reviews element containing zero or more review attributes. -->
+                <!ELEMENT review (#PCDATA)>         <!-- review element for a person's review of the car, with parsed character data. -->
+            <!ELEMENT externalPromoPage (#PCDATA)>  <!-- URL of the cars promotional page. -->
+            <!ELEMENT promoPicFile (#PCDATA)>       <!-- Image file of the cars promotional image. -->
 
     <!-- Entities for the car models. -->
-    <!ENTITY GLF "Golf GTI">
-    <!ENTITY AMRK "Amarok">
-    <!ENTITY TCRS "T-Cross">
+    <!ENTITY GLF "Golf GTI">    <!-- Entity 1 -->
+    <!ENTITY AMRK "Amarok">     <!-- Entity 2 -->
+    <!ENTITY TCRS "T-Cross">    <!-- Entity 3 -->
 ]>
 
-<car_list>
-    <car>
-        <make>Volkswagen</make>
-        <model>&GLF;</model>
-        <specs>
-            <type>Petrol</type>
-            <range>509 km</range>
-            <topSpeed>250 km/h</topSpeed>
-            <zeroToHundred>6.4 s</zeroToHundred>
+<car_list>                                          <!-- List of cars. -->
+    <!-- First car. -->
+    <car>                                           <!-- Information for a car. -->
+        <make>Volkswagen</make>                     <!-- Make of the car. -->
+        <model>&GLF;</model>                        <!-- Model of the car (uses an entity). -->
+        <specs>                                     <!-- List of specs of the car. -->
+            <type>Petrol</type>                     <!-- Fuel/Engine type of the car. -->
+            <range>509 km</range>                   <!-- Driving range of the car (in km) -->
+            <topSpeed>250 km/h</topSpeed>           <!-- Top speed of the car (in km/h) -->
+            <zeroToHundred>6.4 s</zeroToHundred>    <!-- Zero to one hundred time of the car (in s) -->
         </specs>
-        <description></description>
-        <cost>58713</cost>
-        <safetyRating stars="5"/>
-        <extras>
-            <option>GTI 7-speed DSG</option>
-            <additionalCost>Included with the car.</additionalCost>
+        <description></description>                 <!-- Description of the car. -->
+        <cost>58713</cost>                          <!-- Base price to purchase the car. -->
+        <safetyRating stars="5"/>                   <!-- Safety rating of the car on a scale from 0 to 5 stars. -->
+        <extras>                                    <!-- Extras available for the car. -->
+            <option>GTI 7-speed DSG</option>        <!-- The name of the option available. -->
+            <additionalCost>Included with the car.</additionalCost>  <!-- The additional cost of the option. -->
         </extras>
-        <extras>
+        <extras>                                    <!-- Second extra. -->
             <option>Pure White</option>
             <additionalCost>Included with the car.</additionalCost>
         </extras>
-        <extras>
+        <extras>                                    <!-- Third extra. -->
             <option>Moonstone Grey Premium</option>
             <additionalCost>Included with the car.</additionalCost>
         </extras>
-        <couponCode></couponCode>
-        <reviews>
-            <review></review>
+        <couponCode></couponCode>                   <!-- The coupon code that can be used with the purchase of this car. -->
+        <reviews>                                   <!-- List of reviews of the car. -->
+            <review></review>                       <!-- Review of the car. -->
         </reviews>
-        <externalPromoPage>https://www.volkswagen.com.au/en/models/golf-gti.html</externalPromoPage>
-        <promoPicFile>images\Golf-GTI-hero-custom.jpg</promoPicFile>
+        <externalPromoPage>https://www.volkswagen.com.au/en/models/golf-gti.html</externalPromoPage>   <!-- URL to the promotional page for this vehicle. -->
+        <promoPicFile>images\Golf-GTI-hero-custom.jpg</promoPicFile>                                   <!-- The relative path (or filename) of a promotional picture of this vehicle. -->
     </car>
 
-    <car>
-        <make>Volkswagen</make>
-        <model>&AMRK;</model>
-        <specs>
-            <type>Diesel</type>
-            <range>1025 km</range>
-            <topSpeed>204 km/h</topSpeed>
-            <zeroToHundred>7.9 s</zeroToHundred>
+    <!-- Second car. -->
+    <car>                                           <!-- Information for a car. -->
+        <make>Volkswagen</make>                     <!-- Make of the car. -->
+        <model>&AMRK;</model>                       <!-- Model of the car (uses an entity). -->
+        <specs>                                     <!-- List of specs of the car. -->
+            <type>Diesel</type>                     <!-- Fuel/Engine type of the car. -->
+            <range>1025 km</range>                  <!-- Driving range of the car (in km) -->
+            <topSpeed>204 km/h</topSpeed>           <!-- Top speed of the car (in km/h) -->
+            <zeroToHundred>7.9 s</zeroToHundred>    <!-- Zero to one hundred time of the car (in s) -->
         </specs>
-        <description></description>
-        <cost>49799</cost>
-        <safetyRating stars="4"/>
-        <extras>
-            <option>Core TDI 400 Nm 4WD 6 Speed MAN</option>
-            <additionalCost>Included with the car.</additionalCost>
+        <description></description>                 <!-- Description of the car. -->
+        <cost>49799</cost>                          <!-- Base price to purchase the car. -->
+        <safetyRating stars="4"/>                   <!-- Safety rating of the car on a scale from 0 to 5 stars. -->
+        <extras>                                    <!-- Extras available for the car. -->
+            <option>Core TDI 400 Nm 4WD 6 Speed MAN</option>        <!-- The name of the option available. -->
+            <additionalCost>Included with the car.</additionalCost> <!-- The additional cost of the option. -->
         </extras>
-        <extras>
+        <extras>                                    <!-- Second extra. -->
             <option>Core TDI 420 Nm 4WD 8 Speed AUTO</option>
             <additionalCost>3090</additionalCost>
         </extras>
-        <couponCode></couponCode>
-        <reviews>
-            <review></review>
+        <couponCode></couponCode>                   <!-- The coupon code that can be used with the purchase of this car. -->
+        <reviews>                                   <!-- List of reviews of the car. -->
+            <review></review>                       <!-- Review of the car. -->
         </reviews>
-        <externalPromoPage>https://www.volkswagen.com.au/en/models/amarok.html</externalPromoPage>
-        <promoPicFile>images\Amarok_Exterior_Lifestyle_Towingcableroll.jpg</promoPicFile>
+        <externalPromoPage>https://www.volkswagen.com.au/en/models/amarok.html</externalPromoPage>   <!-- URL to the promotional page for this vehicle. -->
+        <promoPicFile>images\Amarok_Exterior_Lifestyle_Towingcableroll.jpg</promoPicFile>            <!-- The relative path (or filename) of a promotional picture of this vehicle. -->
     </car>
 
-    <car>
-        <make>Volkswagen</make>
-        <model>&TCRS;</model>
-        <specs>
-            <type>Petrol</type>
-            <range>N/A</range>
-            <topSpeed>193 km/h</topSpeed>
-            <zeroToHundred>10.2 s</zeroToHundred>
+    <!-- Third car. -->
+    <car>                                           <!-- Information for a car. -->
+        <make>Volkswagen</make>                     <!-- Make of the car. -->
+        <model>&TCRS;</model>                       <!-- Model of the car (uses an entity). -->
+        <specs>                                     <!-- List of specs of the car. -->
+            <type>Petrol</type>                     <!-- Fuel/Engine type of the car. -->
+            <range>N/A</range>                      <!-- Driving range of the car (in km) -->
+            <topSpeed>193 km/h</topSpeed>           <!-- Top speed of the car (in km/h) -->
+            <zeroToHundred>10.2 s</zeroToHundred>   <!-- Zero to one hundred time of the car (in s) -->
         </specs>
-        <description></description>
-        <cost>29990</cost>
-        <safetyRating stars="5"/>
-        <extras>
-            <option>85TSI Life 7-Speed DSG</option>
-            <additionalCost>Included with the car.</additionalCost>
+        <description></description>                 <!-- Description of the car. -->
+        <cost>29990</cost>                          <!-- Base price to purchase the car. -->
+        <safetyRating stars="5"/>                   <!-- Safety rating of the car on a scale from 0 to 5 stars. -->
+        <extras>                                    <!-- Extras available for the car. -->
+            <option>85TSI Life 7-Speed DSG</option>             <!-- The name of the option available. -->
+            <additionalCost>Included with the car.</additionalCost> <!-- The additional cost of the option. -->
         </extras>
-        <extras>
+        <extras>                                    <!-- Second extra. -->
             <option>Flash Red</option>
             <additionalCost>Included with the car.</additionalCost>
         </extras>
-        <extras>
+        <extras>                                    <!-- Third extra. -->
             <option>Pure White</option>
             <additionalCost>Included with the car.</additionalCost>
         </extras>
-        <extras>
+        <extras>                                    <!-- Fourth extra. -->
             <option>Energetic Orange Metallic</option>
             <additionalCost>600</additionalCost>
         </extras>
-        <couponCode></couponCode>
-        <reviews>
-            <review></review>
+        <couponCode></couponCode>                   <!-- The coupon code that can be used with the purchase of this car. -->
+        <reviews>                                   <!-- List of reviews of the car. -->
+            <review></review>                       <!-- Review of the car. -->
         </reviews>
-        <externalPromoPage>https://www.volkswagen.com.au/en/models/t-cross.html</externalPromoPage>
-        <promoPicFile>images\T-Cross_Green_Exterior_Lifestyle_Exterior.jpg</promoPicFile>
+        <externalPromoPage>https://www.volkswagen.com.au/en/models/t-cross.html</externalPromoPage>  <!-- URL to the promotional page for this vehicle. -->
+        <promoPicFile>images\T-Cross_Green_Exterior_Lifestyle_Exterior.jpg</promoPicFile>            <!-- The relative path (or filename) of a promotional picture of this vehicle. -->
     </car>
 </car_list>
