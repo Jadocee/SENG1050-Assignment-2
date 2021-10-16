@@ -1,202 +1,107 @@
 /*      Filename:   style.css
         Author:     Jaydon Cameron
+        Validator:  https://jigsaw.w3.org/css-validator/
         Created:    03/09/2021      */
 
 html {
-    background-size: cover;
-    background-position: center;
     background-image: url(images/diego-jimenez-A-NVHPka9Rk-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100%;
+    height: 100%;
 }
 
-body {
-    font-family: "Work Sans", sans-serif;
-    margin: 0;
-    text-align: left;
-    background-color: rgba(0,0,0,0); /* Added because background is black otherwise. */
-
-}
-
-.container {
-    width: 80%; /*  Set width to 80% of the window's size.  */
-    margin: 0 auto; /*  Set the margin to 0 or what the browser thinks.  */
-}
-
+/*          Top Navigation Bar          */
 header {
-    background: #2F3136; /* Set the background color of the header. */
-
+    background: #2F3136;    /* Set the background color of the header. */
+    margin: -1cm -1cm 0;
 }
+
 /*  Creates empty space below the header, and removes it.
     This is a fix I found online for a problem I encountered when designing my
-    navigation bar. */
+    navigation bar.                     */
 header::after {
     content: '';
     display: table;
     clear: both;
 }
 
-.logo {
-    float: left;    /*  Float the logo to the left-hand side of the .container.  */
-    padding: 10px 0;    /* Create padding around the logo of 10px or 0 in size.  */
+.container {
+    width: available; /*  Set width to 80% of the window's size.  */
+    margin: 0 1cm;
 }
 
-nav {
-    float: right;   /*  Float navBar to the right-hand side of the .container.  */
+.logo {
+    float: left;        /*  Float the logo to the left-hand side of the .container.  */
+    padding: 6px 0;    /* Create padding around the logo of 10px or 0 in size.  */
 }
+
+#TopNav {
+    float: right;       /*  Float navBar to the right-hand side of the .container.  */
+}
+
+nav a:active {
+    color: lightcoral;
+}
+
 nav ul {
-    margin: 0;  /*  No margin.  */
-    padding: 0; /*  No padding. */
+    margin: 0;          /*  No margin.  */
+    padding: 0;         /*  No padding. */
     list-style: none;   /*  No bullet points for list   */
 }
 
 nav li {
     display: inline-block;  /* Set the list inside navBar to act as an inline block. */
-    margin-left: 70px;  /* Set the margin for the left of the list to 70px. */
-    padding-top: 33px;  /*  Set padding for the top of the list to 33px.    */
+    margin-left: 70px;      /* Set the margin for the left of the list to 70px. */
+    padding-top: 26px;      /*  Set padding for the top of the list to 33px.    */
 }
 
 nav a {
     color: white;               /*  Set text color of the a tag inside nav to be white  */
     text-decoration: none;      /*  Remove text decorations */
     text-transform: uppercase;  /*  Make text all uppercase */
-    font-size: 14px;            /*  Change the font size to 14 pixels   */
+    font-size: 12pt;            /*  Change the font size to 14 pixels   */
 }
 
-nav a:hover {
-    color: black;               /*  Set text color to black */
-    font-size: larger;          /*  Set font size to larger */
+nav a:link {
+    font-weight: bold;
 }
 
-nav a:visited {
-    color: red;                 /*  Set text color to red   */
+#TopNav ul li a:hover {
+    color: lightcoral;               /*  Set text color to black */
+    font-size: 14pt;          /*  Set font size to larger */
 }
-body h1 {
+
+/*      Body        */
+body {
+    position: relative;
+    font-size: 14pt;
+    color: white;
+    font-family: "Work Sans", sans-serif;
+    margin: 1cm;
+    text-align: left;
+    width: available;
+    min-height: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+
+h1 {
     text-align: center;         /*  Align text to the center of the body    */
     text-transform: uppercase;  /*  Make text all uppercase */
 }
 
-.homeTitle {
-    margin: 1cm;                /* Set margin 1cm all around    */
-}
-
-.homeTitle img {
-    display: block;             /*  Make img inside homeTitle div display as a block    */
-    width: 50%;                 /*  Set width of the image to take up 50% of the homeTitle div    */
-    margin-left: auto;          /* Set margin from the left to auto */
-    margin-right: auto;         /* Set margin from the right to auto */
-}
-
-.homeTitle .homeTitleText {
-    margin-left: auto;          /* Set margin from the left to auto */
-    margin-right: auto;         /* Set margin from the right to auto */
-    width: 50%;                 /*  Set width of the image to take up 50% of the homeTitle div    */
-    text-align: center;         /*  Align text to the center of the homeTitle div   */
-    font-size: xxx-large;       /* Set text size to xxx large   */
-    text-transform: uppercase;  /*  Make text all uppercase */
-    background-color: rgb(48, 52, 67);  /*  Set background color of the homeTitle div using rgb code */
-    color: white;                       /*  Set text color to white */
-}
-
-.homeTitle .homeTitleText span {
-    color: red;                 /*  Set text color to red   */
-    font-weight: bold;          /*  Make text bold  */
-}
-
-.Homepage {
-    margin-left: 1cm;           /* Set margin to be 1cm from the left */
-    margin-right: 1cm;          /* Set margin to be 1cm from the right */
-    color: white;               /* Set text color to white  */
-}
-
-body h2 {
-    text-align: left;           /* Align text to the left side of the body  */
+h2 {
+    text-align: center;         /* Align text to the center of the body  */
     text-transform: uppercase;  /*  Make text all uppercase */
     text-decoration: underline; /*  Underline text  */
 }
 
-.OurServices {
-    background-color: #2F3136;  /*  Set background color of OurServices section using hex code  */
-}
-
-.OurServices p {
-    margin-left: 1cm;           /* Set margin to be 1cm from the left */
-    margin-right: 1cm;          /* Set margin to be 1cm from the right */
-}
-
-.listOfServices {
-    display: flex;              /*  Set .listOfServices to display as a flex    */
-    text-align: center;         /*  Align text to the center of .listOfServices */
-}
-
-.listOfServices div {
-    flex: 1;                    /*  Set the flex of div inside .listOfServices to 1 */
-}
-
-.listOfServices img {
-    width: 80%;                 /*  Set width of img to 80% of .listOfServices  */
-    float: top;                 /*  Float img to the top of .listOfServices */
-    margin-left: 1cm;           /* Set margin to be 1cm from the left */
-    margin-right: 1cm;          /* Set margin to be 1cm from the right */
-}
-
-.listOfServices p {
-    text-align: left;           /* Align text to the left of .listOfServices    */
-    float: bottom;              /*  Float p to the bottom of .listOfServices    */
-    margin-left: 1cm;           /* Set margin to be 1cm from the left */
-    margin-right: 1cm;          /* Set margin to be 1cm from the right */
-}
-
-.listOfServices h2 {
-    margin-left: 1cm;           /* Set margin to be 1cm from the left */
-}
-
-.buy {
-    float: left;                /*  Float .buy to the left of its wrapper   */
-    display: inline-block;      /* Display contents of .buy as an inline block  */
-
-}
-
-.swap {
-    display: inline-block;      /* Display contents of .swap as an inline block  */
-
-}
-
-.sell {
-    display: inline-block;      /* Display contents of .sell as an inline block  */
-    float: right;               /*  Float .sell to the right of its wrapper */
-}
-
-
-.showcase ul {
-    list-style: none;           /*  Remove list styling (i.e. bullets)    */
-}
-.showcase {
-    color: white;               /*  Set text color to white */
-    float: left;                /*  Float .showcase to the left of its wrapper  */
-    background-color: #2F3136;  /*  Set background color of .showcase using hex code    */
-    margin: 1cm;                /*  Set margin to 1cm all around    */
-}
-
-.showcase img {
-    width: 40%;                 /*  Set width of img to 40% of .showcase    */
-    float: left;                /*  Float img to the left of .showcase  */
-    margin-right: 1cm;          /*  Set the margin to 1cm from the right    */
-}
-
-.showcase ul li p {
-    float: right;               /*  Float p to the right of .showcase   */
-    margin-right: 1cm;          /*  Set margin to 1cm from the right    */
-}
-
-.showcase a:visited {
-    color: darkviolet;          /*  Set the color of a to darkviolet. If a (link) has been visited. */
-}
-
-.showcase a:link {
-    color: aqua;                /*  Set the color of a to aqua. If a is a link. */
-}
-
-.showcase a:hover {
-    color: blue;                /*  Set the color of a to blue. If the cursor is over (or hovering) a.*/
+h3 {
+    text-align: left;           /* Align text to the left side of the body  */
+    text-transform: uppercase;  /*  Make text all uppercase */
 }
 
 abbr:hover {
@@ -204,7 +109,8 @@ abbr:hover {
 }
 
 .copyright {
-    margin: 1cm;                /*  Set the margin to 1cm all around    */
+    margin-left: 1cm;
+    margin-right: 1cm;            /*  Set the margin to 1cm all around    */
     text-align: right;          /*  Align the text to the right of .copyright   */
     color: white;               /*  Set the text color to white */
 }
@@ -213,29 +119,155 @@ abbr:hover {
     color: aqua;                /*  Set the color of a to aqua. If a is a link. */
 }
 
-.copyright a:hover {
-    color: blue;                /*  Set the color of a to blue. If the cursor is over (or hovering) a.*/
+fieldset {
+    margin-top: 18px;
+    border-color: #2F3342;
+    background-color: #2F3136;
+    text-align: left;
+    border-radius: 10px;
+}
+input {
+    border-radius: 5px;
+    border: none;
+    height: auto;
+    width: available;
+    font-size: 12pt;
 }
 
-.copyright a:visited {
-    color: darkviolet;          /*  Set the color of a to darkviolet. If a (link) has been visited. */
+textarea {
+    font-size: 12pt;
 }
 
-.disclaimer {
-    font-size: x-small;
+label {
+    font-size: medium;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 24px;
+    margin: auto;
+}
+
+.inline {
     display: inline-block;
-    float: bottom;
-    font-style: italic;
+    width: 47.28%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.disclaimer a:link {
-    color: aqua;                /*  Set the color of a to aqua. If a is a link. */
+.formNavigation input[type="button"],input[type="submit"] {
+    border-radius: 20px;
+    border:  none;
+    height: 48px;
+    width: 96px;
+    background-color: lightsteelblue;
+    color: white;
+    font-size: x-large;
 }
 
-.disclaimer a:hover {
-    color: blue;                /*  Set the color of a to blue. If the cursor is over (or hovering) a.*/
+/* Bottom of webpage */
+footer {
+    display: block;
+    position: relative;
+    width: available;
+    left: 0;
+    bottom: -15%;
+    right: 0;
+    font-size: 11pt;
+    background-color: #2F3136;
+    margin: 1cm -1cm auto -1cm;
 }
 
-.disclaimer a:visited {
-    color: darkviolet;          /*  Set the color of a to darkviolet. If a (link) has been visited. */
+#footerLinks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #2F3342;
+    height: fit-content;
+    vertical-align: center;
+}
+
+#footerLinks li {
+    font-size: 9pt;
+    padding-top: 8px;
+    vertical-align: center;
+    display: inline-block;
+    margin-left: 1cm;
+}
+
+#footerLinks li a:active {
+    color: lightgrey;
+}
+
+#footerLinks li a:link:hover {
+    color: coral;
+    font-size: 10pt;
+}
+
+a:visited {
+    color: #A02E00;
+}
+
+a:hover {
+    color: coral;
+}
+
+a:link {
+    color: lightsteelblue;
+}
+
+#footerLinks li a:link {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+
+
+.copyright{
+
+}
+
+#copyrightStatement {
+    text-align: left;
+    padding-bottom: 8px;
+    color: lightgrey;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* Underline hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    font-size: 12pt;
+    visibility: hidden;
+    width: 80%;
+    min-width: fit-content;
+    background-color: #2F3136;
+    color: #fff;
+    text-align: left;
+    padding: 5px;
+    margin: 1px;
+    border-radius: 6px;
+    position: absolute;     /* Set position to be relative to the overall page */
+    z-index: 1;             /* Bring forward */
+}
+
+/* Tooltip Text on hover */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip:hover {
+    color: lightcoral;
+}
+
+main {
+    background-color: #2F3136;
+    border-radius: 10px;
+    padding: 1cm;
 }

@@ -1,143 +1,275 @@
 <!DOCTYPE html>
-
 <!--    Filename:   index.html
         Author:     Jaydon Cameron
+        Validator:  https://validator.w3.org/
         Created:    03/09/2021      -->
 
-<html xmlns="http://www.w3.org/1999/html">
-        <head>
-            <link rel="stylesheet" href="style.css" type="text/css"/>
-            <meta charset="utf-8"/>
-            <title>Jim's Cars</title>
-        </head>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <meta charset="utf-8"/>
+        <title>Jim's Cars</title>
+        <style>
+            .homepage {
+                border-radius: 10px;
+                padding: 1px 1cm;
+                background-color: #2F3136;  /*  Set background color of OurServices section using hex code  */
+            }
 
+            .listOfServices {
+                width: 100%;
+                display: flex;              /*  Set .listOfServices to display as a flex    */
+                text-align: center;         /*  Align text to the center of .listOfServices */
+            }
 
+            .listOfServices img {
+                border-radius: 10px;
+                height: auto;
+                width: 100%; /*  Set width of img to 80% of .listOfServices  */
+            }
 
-        <body>
-            <header>
-                <div class="container">
-                    <img src="images/logowhite.png" alt="logo" class="logo" height="70">
-                    <nav>
-                        <ul>
-                            <li><a href=#services>Our Services</a></li>
-                            <li><a href=#showcase>Today's Showcase</a></li>
-                            <li><a href="xml/category_1_Tesla.xml">Tesla</a></li>
-                            <li><a href="xml/category_2_Volkswagen.xml">Volkswagen</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
+            .listOfServices p {
+                text-align: left;
+                width: 95%;       /* Set margin to be 1cm from the right */
+            }
 
-            <div class="homeTitle">
-                <img src="images/jim.png">
-                <div class="homeTitleText">
-                    Take care of <span>buying a car</span> before it gets out of hand
-                </div>
+            .service {
+                padding-left: 2.5%;
+                padding-right: 2.5%;
+                width: 100%;
+                background-color: #2F3342;
+                border-radius: 25px;
+            }
+
+            #buy {
+                margin-right: 1cm;
+                float: left;                /*  Float .buy to the left of its wrapper   */
+                display: inline-block;      /* Display contents of .buy as an inline block  */
+            }
+
+            #swap {
+                margin-right: 1cm;
+                display: inline-block;      /* Display contents of .swap as an inline block  */
+
+            }
+
+            #sell {
+                display: inline-block;      /* Display contents of .sell as an inline block  */
+                float: right;               /*  Float .sell to the right of its wrapper */
+            }
+
+            #showcase {
+                margin-top: 10%;
+                margin-bottom: 1cm;
+            }
+
+            #showcase img {
+                border-radius: 10px;
+                height: auto;
+                width: 35%;                 /*  Set width of img to 40% of .showcase    */
+                float: left;                /*  Float img to the left of .showcase  */
+                margin-right: 1cm;          /*  Set the margin to 1cm from the right    */
+            }
+
+            #showcase ul li {
+                display: inline-block;
+                background-color: #2F3342;
+                margin-bottom: 1cm;
+                border-radius: 25px;
+                padding: 1%;
+                width: auto;
+                margin-left: -1cm;
+
+            }
+
+            .showcase a:visited {
+                color: darkviolet;          /*  Set the color of a to darkviolet. If a (link) has been visited. */
+            }
+
+            .showcase a:link {
+                color: aqua;                /*  Set the color of a to aqua. If a is a link. */
+            }
+
+            .showcase a:hover {
+                color: blue;                /*  Set the color of a to blue. If the cursor is over (or hovering) a.*/
+            }
+
+            .disclaimer {
+                font-size: x-small;
+                display: inline-block;
+                font-style: italic;
+            }
+
+            .disclaimer a:link {
+                color: aqua;                /*  Set the color of a to aqua. If a is a link. */
+            }
+
+            .disclaimer a:hover {
+                color: blue;                /*  Set the color of a to blue. If the cursor is over (or hovering) a.*/
+            }
+
+            .disclaimer a:visited {
+                color: darkviolet;          /*  Set the color of a to darkviolet. If a (link) has been visited. */
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="container">
+                <img src="images/logowhite.png" alt="logo" class="logo" height="70">
+                <nav id="TopNav">
+                    <ul>
+                        <li><a href=#services>Our Services</a></li>
+                        <li><a href=#showcase>Today's Showcase</a></li>
+                        <li><a href=Collection%20Page/form.html>List a Car</a></li>
+                        <li><a href="xml/category_1_Tesla.xml">Tesla</a></li>
+                        <li><a href="xml/category_2_Volkswagen.xml">Volkswagen</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                    </ul>
+                </nav>
             </div>
+        </header>
 
+        <section style="margin-bottom: 10%;">
+            <h1>Jim's Cars</h1>
+            <p style="font-size: xxx-large; color: white; text-align: center; background-color: #2F3342;
+            border-radius: 64px; padding: 6px;">
+                <STRONG>Welcome to Jim's Cars!</STRONG><br/> We're the
+                <span style="font-weight: bold; color: lightcoral;">largest</span>
+                <abbr title="car dealership franchise system"><em>CDFS</em></abbr>
+                in the world, with more than 1,500 franchisees operating in Australia.
+            </p>
+        </section>
 
-            <section class="Homepage">
-                <p style="font-size: xx-large;"><STRONG>Welcome to Jim's Cars!</STRONG>
-                    We're the <span style="font-weight: bold; color: red;">largest</span> <abbr title="car dealership franchise system"><em>CDFS</em></abbr> in the world,
-                    with more than 1,500 franchisees operating in Australia.</p><br>
-
-
-                <div class="OurServices">
-                    <h1 id="services">our services</h1>
-                    <p style="font-size: larger">Want the best looking car on the street?
-                        Your local Jim's Cars team can help, often with a same day service if our schedule permits.
-                        Whether its regular <abbr title="buy and sell">B&S</abbr>, or a one-off swap,
-                        the team at Jim's Cars can help.</p>
-                    <div class="listOfServices">
-
-                        <div class="buy">
-                            <h2>buy</h2>
-                                <a href="https://imgr.search.brave.com/0tXsYT9u451lQK0Gj7i3ylSTnNiL7nJIsA8HreNij24/fit/1200/1200/ce/1/aHR0cDovL3BlcnEu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDEzLzEwL2lTdG9j/a18wMDAwMTk3ODY3/ODBMYXJnZTEuanBn"><img src="images/iStock_000019786780Large1.jpg"></a>
-                                <p style="font-size: larger">Jim’s Cars offers an affordable <abbr title="car buying and loan service">
-                                CBLS</abbr> – from initial car design, to add-on selection, mileage, performance, seating
-                                and more.
-                                So if you are looking to buy a new car, or just need a car for the weekend, or need a loan
-                                to buy that dream car, don’t put off the purchase any longer. Call us for a free
-                                quote on  131 546 or Book Online. Your local Jim can work with you to come up with your perfect
-                                car, and ensure that the result is practical, sustainable and easy to maintain.</p>
-                        </div>
-
-                        <div class="swap">
-                            <h2>swap</h2>
-                            <a href="https://g.foolcdn.com/image/?url=https%3A//g.foolcdn.com/editorial/images/168760/car_dealership.jpg&w=2000&op=resize"><img src="images/car_dealership.jpg"></a>
-                            <p style="font-size: larger">Need the car swapped?
-                                And don't have the time, tools or expertise to do it yourself?
-                                Give Jim's Cars a call on 131 546 - we can often provide a same-day car swap if our schedule
-                                permits. Whether you are after a one-off, quick swap before the next road-trip,
-                                a car to use while yours is being repaired, or more regular car swapping, let us show you why
-                                Jim’s is the largest and most trusted <abbr title="car swapping service">CSS
-                                </abbr>in Australia.</p>
-                        </div>
-
-                        <div class="sell">
-                            <h2>sell</h2>
-                            <a href="https://imgr.search.brave.com/AEvEcPGfEMSLwWIyV-_yrhMdP7gAtlKNRMLDr-xQXyU/fit/612/408/ce/1
-                            /aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vcGhvdG9z/L2Nhci1hZ2VudC1j/b25ncmF0dWxhdGUt/dGhlLWZhbWlse
-                            S1w/aWN0dXJlLWlkNDk1/NTkzOTM0P2s9NiZt/PTQ5NTU5MzkzNCZz/PTYxMng2MTImdz0w/Jmg9dl9lcnlvNXY0/dmpCRFlPak
-                            RoRHFa/X1ljMkNXcVl0S2xt/TkZzdDgwWjJLMD0"><img src="images/car-agent-congratulate-the-family-picture-id495593934.jpg"></a>
-                            <p style="font-size: larger">Putting off selling that car?  Call Jim’s on 131 546 or Book
-                                Online – we can even have the car sold today if our schedule permits!
-                                We do thorough inspections and cleaning – often on the same day you sell – taking away rubbish
-                                and debris fast. We leave you with the cash from the sale.
-                                Sell the car and gain glorious garage space.</p>
-                        </div>
-                    </div>
-                    <p class="disclaimer">
-                        <strong>DISCLAIMER</strong> The information presented here is a mock-up that uses information
-                        inspired by <a href="https://www.jimsmowing.com.au/">Jim's Mowing</a>, and shares similarities
-                        to their descriptions of services.
+        <section class="homepage">
+            <h2 id="services">our services</h2>
+            <p>Want the best looking car on the street?
+                Your local Jim's Cars team can help, often with a same day service if our schedule permits.
+                Whether its regular <abbr title="buy and sell">B&S</abbr>, or a one-off swap,
+                the team at Jim's Cars can help.</p>
+            <div class="listOfServices">
+                <div id="buy" class="service">
+                    <h3>buy</h3>
+                    <a href="https://imgr.search.brave.com/0tXsYT9u451lQK0Gj7i3ylSTnNiL7nJIsA8HreNij24/fit/1200/1200/ce/1/aHR0cDovL3BlcnEu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDEzLzEwL2lTdG9j/a18wMDAwMTk3ODY3/ODBMYXJnZTEuanBn"><img src="images/iStock_000019786780Large1.jpg" alt="buyImage"></a>
+                    <p>
+                        Jim’s Cars offers an affordable <abbr title="car buying and loan service">
+                        CBLS</abbr> – from initial car design, to add-on selection, mileage, performance, seating
+                        and more.
+                        So if you are looking to buy a new car, or just need a car for the weekend, or need a loan
+                        to buy that dream car, don’t put off the purchase any longer. Call us for a free
+                        quote on  131 546 or Book Online. Your local Jim can work with you to come up with your perfect
+                        car, and ensure that the result is practical, sustainable and easy to maintain.
                     </p>
                 </div>
-            </section>
+                <div id="swap" class="service">
+                    <h3>swap</h3>
+                    <a href="https://g.foolcdn.com/image/?url=https%3A//g.foolcdn.com/editorial/images/168760/car_dealership.jpg&w=2000&op=resize"><img src="images/car_dealership.jpg" alt="swapImage"></a>
+                    <p>
+                        Need the car swapped?
+                        And don't have the time, tools or expertise to do it yourself?
+                        Give Jim's Cars a call on 131 546 - we can often provide a same-day car swap if our schedule
+                        permits. Whether you are after a one-off, quick swap before the next road-trip,
+                        a car to use while yours is being repaired, or more regular car swapping, let us show you why
+                        Jim’s is the largest and most trusted <abbr title="car swapping service">CSS
+                        </abbr>in Australia.
+                    </p>
+                </div>
+                <div id="sell" class="service">
+                    <h3>sell</h3>
+                    <a href="https://imgr.search.brave.com/AEvEcPGfEMSLwWIyV-_yrhMdP7gAtlKNRMLDr-xQXyU/fit/612/408/ce/1/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vcGhvdG9z/L2Nhci1hZ2VudC1j/b25ncmF0dWxhdGUt/dGhlLWZhbWlseS1w/aWN0dXJlLWlkNDk1/NTkzOTM0P2s9NiZt/PTQ5NTU5MzkzNCZz/PTYxMng2MTImdz0w/Jmg9dl9lcnlvNXY0/dmpCRFlPakRoRHFa/X1ljMkNXcVl0S2xt/TkZzdDgwWjJLMD0"><img src="images/car-agent-congratulate-the-family-picture-id495593934.jpg" alt="sellImage"></a>
+                    <p>
+                        Putting off selling that car?  Call Jim’s on 131 546 or Book
+                        Online – we can even have the car sold today if our schedule permits!
+                        We do thorough inspections and cleaning – often on the same day you sell – taking away rubbish
+                        and debris fast. We leave you with the cash from the sale.
+                        Sell the car and gain glorious garage space.
+                    </p>
+                </div>
+            </div>
+            <p class="disclaimer">
+                <strong>DISCLAIMER</strong> The information presented here is a mock-up that uses information
+                inspired by <a href="https://www.jimsmowing.com.au/">Jim's Mowing</a>, and shares similarities
+                to their descriptions of services.
+            </p>
+        </section>
 
-            <section class="showcase">
-                <h1 id="showcase">todays showcase</h1>
-                <ul>
-                    <li><h2>Tesla Model S</h2>
-                        <p><img src="images/MS-Exterior-Hero-Desktop.jpg">
-                            With the lowest drag coefficient on Earth and unmatched efficiency, Model S is built for
-                            speed and range. Together with a wider body and chassis, these elements help you go down
-                            the straight or around corners quicker than ever. <br/>
-                            <a href="https://www.tesla.com/models">Visit their website!</a>
-                            </p>
-                    </li>
+        <section class="homepage" id="showcase">
+            <h2>Today's showcase</h2>
+            <ul style="list-style: none;">
+                <li>
+                    <h3>Tesla Model S</h3>
+                    <img src="images/MS-Exterior-Hero-Desktop.jpg" alt="ModelSImage_TodaysShowcase">
+                    <p>
+                        With the lowest drag coefficient on Earth and unmatched efficiency, Model S is built for
+                        speed and range. Together with a wider body and chassis, these elements help you go down
+                        the straight or around corners quicker than ever. <br/>
+                        <a href="https://www.tesla.com/models">Visit their website!</a>
+                    </p>
+                </li>
+                <li>
+                    <h3>Tesla Model 3</h3>
+                    <p><img src="images/tesla_model_3_white.jpg" alt="Model3Image_TodaysShowcase">
+                        Model 3 comes with the option of dual motor all-wheel drive, 20” Überturbine Wheels and
+                        Performance Brakes and lowered suspension for total control, in all weather conditions.
+                        And a <abbr title="carbon fiber spoiler">CFS</abbr> improves stability at high speeds, all allowing Model 3 to
+                        accelerate from 0-100 km/h* in as little as 3.3 seconds. <br/>
+                        <a href="https://www.tesla.com/model3">Visit their website!</a>
+                    </p>
+                </li>
+                <li>
+                    <h3>Tesla Model X</h3>
+                    <p><img src="images/MX-Performance-Hero-Desktop.jpg" alt="ModelXImage_TodaysShowcase">
+                        With the most storage space and towing capacity of any electric SUV, and seating for up to
+                        seven adults, Model X delivers maximum utility. Front doors open and close automatically,
+                        Falcon Wing doors allow for easier loading and a standard trailer hitch lets you bring your
+                        gear anywhere you go. <br/>
+                        <a href="https://www.tesla.com/modelX">Visit their website!</a>
+                    </p>
+                </li>
+            </ul>
+        </section>
 
-                    <li><h2>Tesla Model 3</h2>
-                        <p><img src="images/tesla_model_3_white.jpg">
-                            Model 3 comes with the option of dual motor all-wheel drive, 20” Überturbine Wheels and
-                            Performance Brakes and lowered suspension for total control, in all weather conditions.
-                            And a carbon fiber spoiler improves stability at high speeds, all allowing Model 3 to
-                            accelerate from 0-100 km/h* in as little as 3.3 seconds. <br/>
-                            <a href="https://www.tesla.com/model3">Visit their website!</a>
-                        </p>
-                    </li>
+        <aside style="background-color: #2F3136; border-radius: 24px; width: 800px; height: fit-content;
+        margin-left: auto; margin-right: auto;">
+            <div style="text-align: justify; width: 97%; margin-left: 0; margin-right: auto; height: fit-content;
+             display: inline-block;">
+                <img src="images/jim.png" alt="ImageOfJim_TopOfHomepage" style="display: inline; float: left;
+                    width: 448px; border-radius: 10px; margin-right: 6px;">
+                <p style="display: inline; font-size: x-large; text-transform: uppercase;">
+                    Take care of <span>buying a car</span> before it gets out of hand
+                </p>
+            </div>
+        </aside>
 
-                    <li><h2>Tesla Model X</h2>
-                        <p><img src="images/MX-Performance-Hero-Desktop.jpg">
-                            With the most storage space and towing capacity of any electric SUV, and seating for up to
-                            seven adults, Model X delivers maximum utility. Front doors open and close automatically,
-                            Falcon Wing doors allow for easier loading and a standard trailer hitch lets you bring your
-                            gear anywhere you go. <br/>
-                            <a href="https://www.tesla.com/modelX">Visit their website!</a>
-                        </p>
-                    </li>
-                </ul>
-            </section>
+    </body>
 
-        <div class="copyright">
-            <hr/>
-            <address>
-                Jaydon Cameron <br/>
-                <a href="mailto:C3329145@uon.edu.au">C3329145@uon.edu.au</a> <br/>
-                SENG1050 - Assignment 1
-            </address>
-        </div>
+    <footer>
+        <ul id="footerLinks">
+            <li>
+                <div id="copyrightStatement">
+                    &copy; Jim's Cars 2021 All Rights Reserved
+                </div>
+            </li>
 
+            <li>
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </li>
 
-        </body>
+            <li>
+                <a href="terms-and-conditions.html">Terms and Conditions</a>
+            </li>
+
+            <li>
+                <a href="contact-us.html">Contact Us</a>
+            </li>
+        </ul>
+
+        <address class="copyright">
+            Jaydon Cameron <br/>
+            <a href="mailto:C3329145@uon.edu.au">C3329145@uon.edu.au</a> <br/>
+            SENG1050 - Assignment 2
+        </address>
+    </footer>
 </html>

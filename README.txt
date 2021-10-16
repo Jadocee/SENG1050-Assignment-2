@@ -38,3 +38,7 @@ Safety Ratings:
 
 Image of Jim Penman:
     https://imgr.search.brave.com/cGnR3c--_D-JEYOg3TZGKqYjt6ykiE2foUWvAX1h8n0/fit/650/366/ce/1/aHR0cDovL3Jlc291/cmNlczAubmV3cy5j/b20uYXUvaW1hZ2Vz/LzIwMTIvMDEvMTkv/MTIyNjI0OC8xODM0/NTItamltLXBlbm1h/bi1qaW0tYW1wLTAz/OS1zLW1vd2luZy5q/cGc (original site is not available)
+
+Copyright Statement:
+    Free template provided by https://www.disclaimertemplate.com/free-website-copyright-notice/
+

@@ -1,0 +1,82 @@
+/*          Overall Page                */
+html {
+    background-image: url("../images/diego-jimenez-A-NVHPka9Rk-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+/*          Top Navigation Bar          */
+header {
+    background: #2F3136;    /* Set the background color of the header. */
+    margin: -1cm;
+    margin-bottom: 0;
+}
+
+/*  Creates empty space below the header, and removes it.
+    This is a fix I found online for a problem I encountered when designing my
+    navigation bar.                     */
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.container {
+    width: 80%; /*  Set width to 80% of the window's size.  */
+    margin-left: 1cm;
+    margin-right: 1cm;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.logo {
+    float: left;        /*  Float the logo to the left-hand side of the .container.  */
+    padding: 10px 0;    /* Create padding around the logo of 10px or 0 in size.  */
+}
+
+#TopNav {
+    float: right;       /*  Float navBar to the right-hand side of the .container.  */
+}
+
+nav a:active {
+    color: grey;
+}
+
+nav ul {
+    margin: 0;          /*  No margin.  */
+    padding: 0;         /*  No padding. */
+    list-style: none;   /*  No bullet points for list   */
+}
+
+nav li {
+    display: inline-block;  /* Set the list inside navBar to act as an inline block. */
+    margin-left: 70px;      /* Set the margin for the left of the list to 70px. */
+    padding-top: 33px;      /*  Set padding for the top of the list to 33px.    */
+}
+
+nav a {
+    color: white;               /*  Set text color of the a tag inside nav to be white  */
+    text-decoration: none;      /*  Remove text decorations */
+    text-transform: uppercase;  /*  Make text all uppercase */
+    font-size: 14px;            /*  Change the font size to 14 pixels   */
+}
+
+nav a:hover {
+    color: black;               /*  Set text color to black */
+    font-size: larger;          /*  Set font size to larger */
+}
+
+nav a:visited {
+    color: red;                 /*  Set text color to red   */
+}
+
+
+
+
+
+
+
+
+

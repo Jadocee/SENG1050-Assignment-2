@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <meta charset="utf-8"/>
+    <title>Contact Us</title>
+    <style>
+
+
+
+        fieldset {
+            border: none;
+            background-color: transparent;
+        }
+
+
+
+        input[type="submit"] {
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            border-radius: 10px;
+            font-size: xx-large;
+            margin-top: 24px;
+            height: 48px;
+            position: relative;
+            left: 5%;
+            background-color: lightsteelblue;
+        }
+
+    </style>
+</head>
+
+<header>
+    <div class="container">
+        <img src="images/logowhite.png" alt="logo" class="logo" height="70">
+        <nav id="TopNav">
+            <ul>
+                <li><a href=index.html>Home</a></li>
+                <li><a href=Collection%20Page/form.html>List a Car</a></li>
+                <li><a href="xml/category_1_Tesla.xml">Tesla</a></li>
+                <li><a href="xml/category_2_Volkswagen.xml">Volkswagen</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header><br/>
+
+<body>
+    <main>
+        <h1>Contact Us</h1>
+        <form>
+            <fieldset>
+                <legend><label for="email">Email</label><br/></legend>
+                <input type="text" name="Email" id="email">
+            </fieldset>
+
+            <fieldset>
+                <legend><label for="msg">Message</label><br/></legend>
+                <textarea name="Message" id="msg" rows="10" style="width: 100%; border-radius: 10px"></textarea>
+            </fieldset>
+
+            <fieldset class="inline">
+                <legend><label for="firstName">First Name</label><br/></legend>
+                <input type="text" name="First Name" id="firstName">
+            </fieldset>
+
+            <fieldset class="inline">
+                <legend><label for="lastName">Last Name</label><br/></legend>
+                <input type="text" name="Last Name" id="lastName">
+            </fieldset>
+
+            <fieldset class="inline">
+                <legend><label for="Mail">Mailing Address</label><br/></legend>
+                <input type="text" name="Mailing Address" id="Mail">
+            </fieldset>
+
+            <fieldset class="inline" style="width: 15%;">
+                <legend><label for="City">City</label><br/></legend>
+                <input type="text" name="City" id="City">
+            </fieldset>
+
+            <fieldset class="inline" style="width: 8%;">
+                <legend><label for="Post">Post Code</label><br/></legend>
+                <input type="text" name="Post Code" id="Post" maxlength="4" style="text-align: center;">
+            </fieldset>
+
+            <fieldset>
+                <legend><label for="phNum">Phone Number</label><br/></legend>
+                <input type="text" name="Phone" id="phNum">
+            </fieldset>
+            <br/>
+
+            <fieldset>
+                <input type="checkbox" name="Receive Occasional Emails" id="emailOptIn" style="height: auto;">
+                <label for="emailOptIn">Send me occasional emails about Jim's Cars products and services.</label>
+            </fieldset>
+
+            <input type="submit" value="Send">
+        </form>
+    </main>
+</body>
+
+<footer>
+    <ul id="footerLinks">
+        <li>
+            <div id="copyrightStatement">
+                &copy; Jim's Cars 2021 All Rights Reserved
+            </div>
+        </li>
+
+        <li>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </li>
+
+        <li>
+            <a href="terms-and-conditions.html">Terms and Conditions</a>
+        </li>
+
+        <li>
+            <a href="contact-us.html">Contact Us</a>
+        </li>
+
+    </ul>
+    <address class="copyright">
+        Jaydon Cameron <br/>
+        <a href="mailto:C3329145@uon.edu.au">C3329145@uon.edu.au</a> <br/>
+        SENG1050 - Assignment 2
+    </address>
+</footer>
+</html>

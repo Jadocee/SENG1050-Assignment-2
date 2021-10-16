@@ -2,7 +2,7 @@
 <!DOCTYPE car_list [
     <!--    Filename:   xmlTemplate.xml
             Author:     Jaydon Cameron
-            Validator:
+            Validator:  https://validator.w3.org/
             Created:    03/09/2021      -->
 
     <!ELEMENT car_list (car+)>                      <!--Element (or tag) containing one or more car elements.-->

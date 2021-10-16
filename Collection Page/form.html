@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../style.css" type="text/css"/>
+        <meta charset="UTF-8">
+        <title>Collection Page</title>
+        <script type="text/javascript" src="form.js"></script>
+        <style>
+            legend {
+                font-size: 20pt;
+            }
+
+            .topText {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .input {
+                margin: auto 16px;      /* Set margin for top and bottom to auto, and margin for left and right to 16px */
+                display: inline-block;  /* Set to display inline as one block */
+            }
+
+            /*   Personal Information Form    */
+            #personInfo {
+                display: block;
+            }
+
+            #billing {
+                display: none;
+            }
+
+            #numOfPrevSubmissions {
+                display: none;
+            }
+
+            /* Form Navigation */
+            .prevNext {
+                float: right;
+                font-weight: bold;
+            }
+
+            .formNavigation {
+                display: inline-block;
+                width: 100%;
+                margin: 1.5% auto;
+            }
+
+            .formNavigation input[type="button"]:hover {
+                background-color: lightblue;
+            }
+
+            .formNavigation input[type="button"]:active {
+                background-color: lightsteelblue;
+            }
+
+            #Description {
+                width: 98%;
+                margin-left: 1%;
+                margin-right: 1%;
+            }
+
+            #DescriptionTextLimit {
+                color: black;
+                position: relative;
+                z-index: 1;
+                bottom: 32px;
+                float: right;
+                right: 1.5%;
+            }
+
+            input[type="radio"] {
+                margin-top: 8px;
+            }
+        </style>
+    </head>
+
+    <body>
+    <header>
+        <div class="container">
+            <img src="../images/logowhite.png" alt="logo" class="logo" height="70">
+            <nav id="TopNav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="form.html">List a Car</a></li>
+                    <li><a href="../xml/category_1_Tesla.xml">Tesla</a></li>
+                    <li><a href="../xml/category_2_Volkswagen.xml">Volkswagen</a></li>
+                    <li><a href="../about-us.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <h1>car listing form</h1>
+        <div id="container">
+            <form name="dataCollectionForm" method="get" action="http://jkorpela.fi/cgi-bin/echo.cgi">
+                <section id="personInfo" style="margin-top: 5%;">
+                    <p class="topText">First, we need you to tell us a little about yourself 😄</p>
+                    <fieldset>
+                        <legend>Name</legend>
+                        <label for="firstName" class="input">
+                            First Name
+                            <span class="tooltip">*<span class="tooltiptext">Required Field</span></span>
+                            <input type="text" name="firstName" id="firstName">
+                        </label>
+
+
+                        <label for="middleName" class="input">
+                            Middle Name
+                            <input type="text" name="middleName" id="middleName">
+                        </label>
+
+
+                        <label for="lastName" class="input">
+                            Last Name
+                            <span class="tooltip">*<span class="tooltiptext">Required Field</span></span>
+                            <input type="text" name="lastName" id="lastName">
+                        </label>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                            <label for="email" class="input">
+                                Email Address
+                                <span class="tooltip">*<span class="tooltiptext">Required Field</span></span>
+                                <input type="text" name="email" id="email" class="inline">
+                            </label>
+
+                            <label for="phNum" class="input">
+                                Phone Number
+                                <span class="tooltip">*<span class="tooltiptext">Required Field</span></span>
+                                <input type="text" name="phNum" id="phNum" minlength="10" maxlength="10" class="inline">
+                            </label>
+                    </fieldset>
+
+                    <fieldset id="residential">
+                        <legend>
+                            Residential Address
+                            <span class="tooltip">*<span class="tooltiptext">Required</span></span>
+                        </legend>
+                        <label for="resAddress" class="input">
+                            Street Address
+                            <input type="text" name="resAddress" id="resAddress">
+                        </label>
+
+                        <label for="city" class="input">
+                            City
+                            <input type="text" name="city" id="city">
+                        </label>
+
+                        <label for="state" class="input">
+                            State
+                            <select name="state" id="state">
+                                <option>Choose a state.</option>
+                                <option>NSW</option>
+                                <option>QLD</option>
+                                <option>WA</option>
+                                <option>ACT</option>
+                                <option>NT</option>
+                                <option>SA</option>
+                                <option>TAS</option>
+                            </select>
+                        </label>
+
+                        <label for="post" class="input">
+                            Post Code
+                            <input type="text" name="post" id="post" maxlength="4">
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            Is your billing address the same as your residential address?
+                            <span class="tooltip">*<span class="tooltiptext">Required</span></span>
+                        </legend>
+                        <input type="radio" name="isRes" id="isResTrue" onclick="billDiff(true)">
+                        <label for="isResTrue">Yes</label>
+                        <br/>
+                        <input type="radio" name="isRes" id="isResFalse" onclick="billDiff(false)">
+                        <label for="isResFalse">No</label>
+                        <br/>
+                    </fieldset>
+
+                    <fieldset id="billing">
+                        <legend>
+                            Billing Address
+                            <span class="tooltip">*<span class="tooltiptext">Required</span></span>
+                        </legend>
+                        <label for="billAddress" class="input">
+                            Street Address
+                            <input type="text" name="billAddress" id="billAddress">
+                        </label>
+
+                        <label for="bcity" class="input">
+                            City
+                            <input type="text" name="bcity" id="bcity">
+                        </label>
+
+                        <label for="bstate" class="input">
+                            State
+                            <select name="bstate" id="bstate">
+                                <option>Choose a state.</option>
+                                <option>NSW</option>
+                                <option>QLD</option>
+                                <option>WA</option>
+                                <option>ACT</option>
+                                <option>NT</option>
+                                <option>SA</option>
+                                <option>TAS</option>
+                            </select>
+                        </label>
+
+                        <label for="bpost" class="input">
+                            Post Code
+                            <input type="text" name="bpost" id="bpost">
+                        </label>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            Have you previously submitted a car?
+                            <span class="tooltip">*<span class="tooltiptext">Required</span></span>
+                        </legend>
+                        <input type="radio" name="carSubmission" id="submittedTrue" onclick="showHideNumOfPrevSubmissions()">
+                        <label for="submittedTrue">Yes</label>
+                        <br/>
+
+                        <input type="radio" name="carSubmission" id="submittedFalse" onclick="showHideNumOfPrevSubmissions()">
+                        <label for="submittedFalse">No</label>
+
+                        <div id="numOfPrevSubmissions">
+                            <br/>
+                            <label for="numOfSubmissions">
+                                Number of previous car submissions
+                                <span class="tooltip">*<span class="tooltiptext">Required Field</span></span>
+                            </label>
+                            <input type="number" name="numOfSubmissions" id="numOfSubmissions" min="1" max="99" disabled
+                            style="width: 28px; max-width: fit-content;">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Have you bought a car in the past 5 years?</legend>
+                        <input type="radio" name="carPastFiveYrs" id="carPastFiveYrs_True">
+                        <label for="carPastFiveYrs_True">Yes</label>
+                        <br/>
+                        <input type="radio" name="carPastFiveYrs" id="carPastFiveYrs_False">
+                        <label for="carPastFiveYrs_False">No</label>
+                        <br/>
+                        <input type="radio" name="carPastFiveYrs" id="carPastFiveYrs_Null" checked>
+                        <label for="carPastFiveYrs_Null">Uncertain</label>
+                    </fieldset>
+
+                    <div class="formNavigation">
+                        <input type="button" value="Clear" onclick="clrForm(0)">
+                        <div class="prevNext">
+                            <input type="button" value="Next" onclick="next(0)">
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <section id="carInfo" style="margin-top: 35%; margin-bottom: 30%; filter: blur(4px);">
+                    <p class="topText" style="display: none;">Great work, <span id="greet">[name]</span>! Now let's hear about that car you're selling 🧐</p>
+                    <fieldset>
+                        <label for="Make" class="input">
+                            Car Make
+                            <span class="tooltip">*<span class="tooltiptext">Required Field</span></span>
+                            <input type="text" name="Make" id="Make" disabled>
+                        </label>
+
+                        <label for="Model" class="input">
+                            Car Model
+                            <span class="tooltip">*<span class="tooltiptext">Required Field</span></span>
+                            <input type="text" name="Model" id="Model" disabled>
+                        </label>
+
+                        <label for="Category" class="input">
+                            Category of the car
+                            <span class="tooltip">*<span class="tooltiptext">Required Field</span></span></label>
+                            <select name="Category" id="Category" disabled>
+                                <option>Select a category</option>
+                                <option>Family</option>
+                                <option>Sports</option>
+                                <option>Super</option>
+                                <option>Luxury</option>
+                                <option>Off-road</option>
+                                <option>Other</option>
+                            </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Enter a description of the car</legend>
+                        <textarea id="Description" name="Description" maxlength="600" rows="15" disabled></textarea>
+                        <label for="Description" id="DescriptionTextLimit">0/600</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Select the following options that apply</legend>
+
+                        <label for="Extras?" class="input">
+                            <input type="checkbox" name="Additional" id="Extras?" disabled>
+                            Extras are included with this vehicle
+                        </label>
+
+
+                        <label for="AllowCoupon?" class="input tooltip">
+                            <input type="checkbox" name="Additional" id="AllowCoupon?" disabled>
+                            I want to allow the use of coupons
+                            <span class="tooltiptext">
+                                Jim's Cars offers customers the opportunity to save money on the purchases of cars
+                                through the use of coupon codes that are handed out via multiple outlets. Jim's Cars
+                                will often distribute or give away these coupon codes through one of the Jim's Cars
+                                social media accounts. These coupon codes will usually provide the customer with a
+                                discount or deal on a specific range of cars and can be applied to their purchase
+                                upon checkout at Jim'sCars.com
+                            </span>
+                        </label>
+                    </fieldset>
+
+                    <div class="formNavigation" style="display: none;">
+                        <input type="button" value="Clear" onclick="clrForm(1)">
+                        <input type="button" value="Restart" onclick="restart()">
+                        <div class="prevNext">
+                            <input type="button" value="Prev" onclick="prev()">
+                            <input type="submit" value="Submit" onclick="next(1)">
+                        </div>
+                    </div>
+
+                </section>
+
+            </form>
+        </div>
+    </body>
+
+    <footer>
+        <ul id="footerLinks">
+            <li>
+                <div id="copyrightStatement">
+                    &copy; Jim's Cars 2021 All Rights Reserved
+                </div>
+            </li>
+
+            <li>
+                <a href="../privacy-policy.html">Privacy Policy</a>
+            </li>
+
+            <li>
+                <a href="../terms-and-conditions.html">Terms and Conditions</a>
+            </li>
+
+            <li>
+                <a href="../contact-us.html">Contact Us</a>
+            </li>
+
+        </ul>
+        <address class="copyright">
+            Jaydon Cameron <br/>
+            <a href="mailto:C3329145@uon.edu.au">C3329145@uon.edu.au</a> <br/>
+            SENG1050 - Assignment 2
+        </address>
+    </footer>
+</html>
