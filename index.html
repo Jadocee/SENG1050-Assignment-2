@@ -2,7 +2,8 @@
 <!--    Filename:   index.html
         Author:     Jaydon Cameron
         Validator:  https://validator.w3.org/
-        Created:    03/09/2021      -->
+        Created:    03/09/2021
+        Updated:    10/10/2021      -->
 
 <html lang="en">
     <head>
@@ -10,12 +11,6 @@
         <meta charset="utf-8"/>
         <title>Jim's Cars</title>
         <style>
-            .homepage {
-                border-radius: 10px;
-                padding: 1px 1cm;
-                background-color: #2F3136;  /*  Set background color of OurServices section using hex code  */
-            }
-
             .listOfServices {
                 width: 100%;
                 display: flex;              /*  Set .listOfServices to display as a flex    */
@@ -58,42 +53,6 @@
                 float: right;               /*  Float .sell to the right of its wrapper */
             }
 
-            #showcase {
-                margin-top: 10%;
-                margin-bottom: 1cm;
-            }
-
-            #showcase img {
-                border-radius: 10px;
-                height: auto;
-                width: 35%;                 /*  Set width of img to 40% of .showcase    */
-                float: left;                /*  Float img to the left of .showcase  */
-                margin-right: 1cm;          /*  Set the margin to 1cm from the right    */
-            }
-
-            #showcase ul li {
-                display: inline-block;
-                background-color: #2F3342;
-                margin-bottom: 1cm;
-                border-radius: 25px;
-                padding: 1%;
-                width: auto;
-                margin-left: -1cm;
-
-            }
-
-            .showcase a:visited {
-                color: darkviolet;          /*  Set the color of a to darkviolet. If a (link) has been visited. */
-            }
-
-            .showcase a:link {
-                color: aqua;                /*  Set the color of a to aqua. If a is a link. */
-            }
-
-            .showcase a:hover {
-                color: blue;                /*  Set the color of a to blue. If the cursor is over (or hovering) a.*/
-            }
-
             .disclaimer {
                 font-size: x-small;
                 display: inline-block;
@@ -132,7 +91,7 @@
             </div>
         </header>
 
-        <section style="margin-bottom: 10%;">
+        <section>
             <h1>Jim's Cars</h1>
             <p style="font-size: xxx-large; color: white; text-align: center; background-color: #2F3342;
             border-radius: 64px; padding: 6px;">
@@ -193,11 +152,11 @@
                 inspired by <a href="https://www.jimsmowing.com.au/">Jim's Mowing</a>, and shares similarities
                 to their descriptions of services.
             </p>
-        </section>
+        </section><br/><br/>
 
-        <section class="homepage" id="showcase">
+        <section class="homepage showcase">
             <h2>Today's showcase</h2>
-            <ul style="list-style: none;">
+            <ul>
                 <li>
                     <h3>Tesla Model S</h3>
                     <img src="images/MS-Exterior-Hero-Desktop.jpg" alt="ModelSImage_TodaysShowcase">
@@ -229,7 +188,7 @@
                     </p>
                 </li>
             </ul>
-        </section>
+        </section><br/><br/>
 
         <aside style="background-color: #2F3136; border-radius: 24px; width: 800px; height: fit-content;
         margin-left: auto; margin-right: auto;">
@@ -243,33 +202,32 @@
             </div>
         </aside>
 
+        <footer>
+            <ul id="footerLinks">
+                <li>
+                    <div id="copyrightStatement">
+                        &copy; Jim's Cars 2021 All Rights Reserved
+                    </div>
+                </li>
+
+                <li>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                </li>
+
+                <li>
+                    <a href="terms-and-conditions.html">Terms and Conditions</a>
+                </li>
+
+                <li>
+                    <a href="contact-us.html">Contact Us</a>
+                </li>
+            </ul>
+
+            <address class="copyright">
+                Jaydon Cameron <br/>
+                <a href="mailto:C3329145@uon.edu.au">C3329145@uon.edu.au</a> <br/>
+                SENG1050 - Assignment 2
+            </address>
+        </footer>
     </body>
-
-    <footer>
-        <ul id="footerLinks">
-            <li>
-                <div id="copyrightStatement">
-                    &copy; Jim's Cars 2021 All Rights Reserved
-                </div>
-            </li>
-
-            <li>
-                <a href="privacy-policy.html">Privacy Policy</a>
-            </li>
-
-            <li>
-                <a href="terms-and-conditions.html">Terms and Conditions</a>
-            </li>
-
-            <li>
-                <a href="contact-us.html">Contact Us</a>
-            </li>
-        </ul>
-
-        <address class="copyright">
-            Jaydon Cameron <br/>
-            <a href="mailto:C3329145@uon.edu.au">C3329145@uon.edu.au</a> <br/>
-            SENG1050 - Assignment 2
-        </address>
-    </footer>
 </html>

@@ -18,6 +18,7 @@ MX-Hero-Desktop.jpg                                         https://www.tesla.co
 MX-Performance-Hero-Desktop.jpg                             https://www.tesla.com/
 T-Cross_Green_Exterior_Lifestyle_Exterior.jpg               https://www.volkswagen.com.au/en/models/t-cross.html
 tesla_model_3_white.jpg                                     https://www.autoexpress.co.uk/tesla/model-3/practicality
+jimpenmanstare.jpeg                                         https://au.newschant.com/business/jims-mowing-owner-jim-penman-denies-sending-sexist-letter-to-green-senator-lidia-thorpe/
 
 -----------------------------------------------------------
                         References
@@ -42,3 +43,18 @@ Image of Jim Penman:
 Copyright Statement:
     Free template provided by https://www.disclaimertemplate.com/free-website-copyright-notice/
 
+About Us Page:
+    The 'about us' page used the following site as a template.
+    https://www.jimsmowing.com.au/about-us/
+
+Privacy Policy:
+    The 'privacy policy' page used a privacy policy generator at https://visser.io/tools/living-in-australia/privacy-policy-generator/
+
+Terms and Conditions:
+    The 'terms and conditions' page used a T&C generator at https://visser.io/tools/living-in-australia/privacy-policy-generator/
+
+Contact Us:
+    The layout of the 'contact us' page was inspired by https://www.zendesk.com/contact/.
+
+Image of Jim Penman Staring:
+    https://au.newschant.com/business/jims-mowing-owner-jim-penman-denies-sending-sexist-letter-to-green-senator-lidia-thorpe/

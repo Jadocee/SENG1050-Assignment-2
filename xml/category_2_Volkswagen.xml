@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet href="category-pages-xslt.xsl" type="text/xsl"?>
+
 <!DOCTYPE car_list [
     <!--    Filename:   category_2_Volkswagen.xml
             Author:     Jaydon Cameron
@@ -44,7 +46,7 @@
             <topSpeed>250 km/h</topSpeed>           <!-- Top speed of the car (in km/h) -->
             <zeroToHundred>6.4 s</zeroToHundred>    <!-- Zero to one hundred time of the car (in s) -->
         </specs>
-        <description></description>                 <!-- Description of the car. -->
+        <description>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. </description>                 <!-- Description of the car. -->
         <cost>58713</cost>                          <!-- Base price to purchase the car. -->
         <safetyRating stars="5"/>                   <!-- Safety rating of the car on a scale from 0 to 5 stars. -->
         <extras>                                    <!-- Extras available for the car. -->
@@ -64,7 +66,7 @@
             <review></review>                       <!-- Review of the car. -->
         </reviews>
         <externalPromoPage>https://www.volkswagen.com.au/en/models/golf-gti.html</externalPromoPage>   <!-- URL to the promotional page for this vehicle. -->
-        <promoPicFile>images\Golf-GTI-hero-custom.jpg</promoPicFile>                                   <!-- The relative path (or filename) of a promotional picture of this vehicle. -->
+        <promoPicFile>../images/Golf-GTI-hero-custom.jpg</promoPicFile>                                   <!-- The relative path (or filename) of a promotional picture of this vehicle. -->
     </car>
 
     <!-- Second car. -->
@@ -77,7 +79,7 @@
             <topSpeed>204 km/h</topSpeed>           <!-- Top speed of the car (in km/h) -->
             <zeroToHundred>7.9 s</zeroToHundred>    <!-- Zero to one hundred time of the car (in s) -->
         </specs>
-        <description></description>                 <!-- Description of the car. -->
+        <description>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. </description>                 <!-- Description of the car. -->
         <cost>49799</cost>                          <!-- Base price to purchase the car. -->
         <safetyRating stars="4"/>                   <!-- Safety rating of the car on a scale from 0 to 5 stars. -->
         <extras>                                    <!-- Extras available for the car. -->
@@ -93,7 +95,7 @@
             <review></review>                       <!-- Review of the car. -->
         </reviews>
         <externalPromoPage>https://www.volkswagen.com.au/en/models/amarok.html</externalPromoPage>   <!-- URL to the promotional page for this vehicle. -->
-        <promoPicFile>images\Amarok_Exterior_Lifestyle_Towingcableroll.jpg</promoPicFile>            <!-- The relative path (or filename) of a promotional picture of this vehicle. -->
+        <promoPicFile>../images/Amarok_Exterior_Lifestyle_Towingcableroll.jpg</promoPicFile>            <!-- The relative path (or filename) of a promotional picture of this vehicle. -->
     </car>
 
     <!-- Third car. -->
@@ -106,7 +108,7 @@
             <topSpeed>193 km/h</topSpeed>           <!-- Top speed of the car (in km/h) -->
             <zeroToHundred>10.2 s</zeroToHundred>   <!-- Zero to one hundred time of the car (in s) -->
         </specs>
-        <description></description>                 <!-- Description of the car. -->
+        <description>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. </description>                 <!-- Description of the car. -->
         <cost>29990</cost>                          <!-- Base price to purchase the car. -->
         <safetyRating stars="5"/>                   <!-- Safety rating of the car on a scale from 0 to 5 stars. -->
         <extras>                                    <!-- Extras available for the car. -->
@@ -130,6 +132,6 @@
             <review></review>                       <!-- Review of the car. -->
         </reviews>
         <externalPromoPage>https://www.volkswagen.com.au/en/models/t-cross.html</externalPromoPage>  <!-- URL to the promotional page for this vehicle. -->
-        <promoPicFile>images\T-Cross_Green_Exterior_Lifestyle_Exterior.jpg</promoPicFile>            <!-- The relative path (or filename) of a promotional picture of this vehicle. -->
+        <promoPicFile>../images/T-Cross_Green_Exterior_Lifestyle_Exterior.jpg</promoPicFile>            <!-- The relative path (or filename) of a promotional picture of this vehicle. -->
     </car>
 </car_list>

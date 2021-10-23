@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="category-pages-xslt.xsl" type="text/xsl"?>
+
 <!DOCTYPE car_list [
     <!--    Filename:   category_1_Tesla.xml
             Author:     Jaydon Cameron
@@ -28,9 +30,9 @@
             <!ELEMENT promoPicFile (#PCDATA)>       <!-- Image file of the cars promotional image. -->
 
     <!-- Entities for the car models. -->
-    <!ENTITY MOD-3 "Model3">    <!-- Entity 1 -->
-    <!ENTITY MOD-S "ModelS">    <!-- Entity 2 -->
-    <!ENTITY MOD-X "ModelX">    <!-- Entity 3 -->
+    <!ENTITY MOD-3 "Model 3">    <!-- Entity 1 -->
+    <!ENTITY MOD-S "Model S">    <!-- Entity 2 -->
+    <!ENTITY MOD-X "Model X">    <!-- Entity 3 -->
 ]>
 
 <car_list>                                          <!-- List of cars. -->
@@ -69,7 +71,7 @@
             <review></review>                       <!-- Review of the car. -->
         </reviews>
         <externalPromoPage>https://www.tesla.com/en_au/model3</externalPromoPage>   <!-- URL to the promotional page for this vehicle. -->
-        <promoPicFile>images\tesla_model_3_white.jpg</promoPicFile>                 <!-- The relative path (or filename) of a promotional picture of this vehicle. -->
+        <promoPicFile>../images/tesla_model_3_white.jpg</promoPicFile>                 <!-- The relative path (or filename) of a promotional picture of this vehicle. -->
     </car>
 
     <!-- Second car. -->
@@ -102,7 +104,7 @@
             <review></review>                       <!-- Review of the car. -->
         </reviews>
         <externalPromoPage>https://www.tesla.com/en_au/models</externalPromoPage>   <!-- URL to the promotional page for this vehicle. -->
-        <promoPicFile>images\ms-main-hero-desktop.jpg</promoPicFile>                <!-- The relative path (or filename) of a promotional picture of this vehicle. -->
+        <promoPicFile>../images/ms-main-hero-desktop.jpg</promoPicFile>                <!-- The relative path (or filename) of a promotional picture of this vehicle. -->
     </car>
 
     <!-- Third car. -->
@@ -136,6 +138,6 @@
             <review></review>                       <!-- Review of the car. -->
         </reviews>
         <externalPromoPage>https://www.tesla.com/en_au/modelx</externalPromoPage>   <!-- URL to the promotional page for this vehicle. -->
-        <promoPicFile>images\MX-Hero-Desktop.jpg</promoPicFile>                     <!-- The relative path (or filename) of a promotional picture of this vehicle. -->
+        <promoPicFile>../images/MX-Hero-Desktop.jpg</promoPicFile>                     <!-- The relative path (or filename) of a promotional picture of this vehicle. -->
     </car>
 </car_list>

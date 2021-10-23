@@ -1,10 +1,15 @@
 <!DOCTYPE html>
+<!--    Filename:   form.html
+        Author:     Jaydon Cameron
+        Validator:  https://validator.w3.org/
+        Created:    10/10/2021      -->
+
 <html lang="en">
     <head>
         <link rel="stylesheet" href="../style.css" type="text/css"/>
         <meta charset="UTF-8">
         <title>Collection Page</title>
-        <script type="text/javascript" src="form.js"></script>
+        <script src="form.js"></script>
         <style>
             legend {
                 font-size: 20pt;
@@ -16,6 +21,7 @@
                 margin-right: auto;
                 font-size: 28px;
                 font-weight: bold;
+                text-align: left;
             }
 
             .input {
@@ -78,25 +84,26 @@
     </head>
 
     <body>
-    <header>
-        <div class="container">
-            <img src="../images/logowhite.png" alt="logo" class="logo" height="70">
-            <nav id="TopNav">
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="form.html">List a Car</a></li>
-                    <li><a href="../xml/category_1_Tesla.xml">Tesla</a></li>
-                    <li><a href="../xml/category_2_Volkswagen.xml">Volkswagen</a></li>
-                    <li><a href="../about-us.html">About Us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        <header>
+            <div class="container">
+                <img src="../images/logowhite.png" alt="logo" class="logo" height="70">
+                <nav id="TopNav">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="form.html">List a Car</a></li>
+                        <li><a href="../xml/category_1_Tesla.xml">Tesla</a></li>
+                        <li><a href="../xml/category_2_Volkswagen.xml">Volkswagen</a></li>
+                        <li><a href="../about-us.html">About Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
         <h1>car listing form</h1>
         <div id="container">
             <form name="dataCollectionForm" method="get" action="http://jkorpela.fi/cgi-bin/echo.cgi">
                 <section id="personInfo" style="margin-top: 5%;">
-                    <p class="topText">First, we need you to tell us a little about yourself 😄</p>
+                    <h2 class="topText">First, we need you to tell us a little about yourself 😄</h2>
                     <fieldset>
                         <legend>Name</legend>
                         <label for="firstName" class="input">
@@ -175,10 +182,10 @@
                             Is your billing address the same as your residential address?
                             <span class="tooltip">*<span class="tooltiptext">Required</span></span>
                         </legend>
-                        <input type="radio" name="isRes" id="isResTrue" onclick="billDiff(true)">
+                        <input type="radio" value="Yes" name="isRes" id="isResTrue" onclick="billDiff(true)">
                         <label for="isResTrue">Yes</label>
                         <br/>
-                        <input type="radio" name="isRes" id="isResFalse" onclick="billDiff(false)">
+                        <input type="radio" value="No" name="isRes" id="isResFalse" onclick="billDiff(false)">
                         <label for="isResFalse">No</label>
                         <br/>
                     </fieldset>
@@ -224,11 +231,11 @@
                             Have you previously submitted a car?
                             <span class="tooltip">*<span class="tooltiptext">Required</span></span>
                         </legend>
-                        <input type="radio" name="carSubmission" id="submittedTrue" onclick="showHideNumOfPrevSubmissions()">
+                        <input type="radio" value="Yes" name="carSubmission" id="submittedTrue" onclick="showHideNumOfPrevSubmissions()">
                         <label for="submittedTrue">Yes</label>
                         <br/>
 
-                        <input type="radio" name="carSubmission" id="submittedFalse" onclick="showHideNumOfPrevSubmissions()">
+                        <input type="radio" value="No" name="carSubmission" id="submittedFalse" onclick="showHideNumOfPrevSubmissions()">
                         <label for="submittedFalse">No</label>
 
                         <div id="numOfPrevSubmissions">
@@ -244,14 +251,14 @@
 
                     <fieldset>
                         <legend>Have you bought a car in the past 5 years?</legend>
-                        <input type="radio" name="carPastFiveYrs" id="carPastFiveYrs_True">
+                        <input type="radio" name="carPastFiveYrs" value="Yes" id="carPastFiveYrs_True">
                         <label for="carPastFiveYrs_True">Yes</label>
                         <br/>
-                        <input type="radio" name="carPastFiveYrs" id="carPastFiveYrs_False">
+                        <input type="radio" name="carPastFiveYrs" value="No" id="carPastFiveYrs_False" checked>
                         <label for="carPastFiveYrs_False">No</label>
                         <br/>
-                        <input type="radio" name="carPastFiveYrs" id="carPastFiveYrs_Null" checked>
-                        <label for="carPastFiveYrs_Null">Uncertain</label>
+                        <!--<input type="radio" name="carPastFiveYrs" id="carPastFiveYrs_Null" checked>
+                        <label for="carPastFiveYrs_Null">Uncertain</label>-->
                     </fieldset>
 
                     <div class="formNavigation">
@@ -265,7 +272,7 @@
 
 
                 <section id="carInfo" style="margin-top: 35%; margin-bottom: 30%; filter: blur(4px);">
-                    <p class="topText" style="display: none;">Great work, <span id="greet">[name]</span>! Now let's hear about that car you're selling 🧐</p>
+                    <h2 class="topText" style="display: none;">Great work, <span id="greet">[name]</span>! Now let's hear about that car you're selling 🧐</h2>
                     <fieldset>
                         <label for="Make" class="input">
                             Car Make
@@ -303,13 +310,13 @@
                         <legend>Select the following options that apply</legend>
 
                         <label for="Extras?" class="input">
-                            <input type="checkbox" name="Additional" id="Extras?" disabled>
+                            <input type="checkbox" name="Included Extras" id="Extras?" disabled>
                             Extras are included with this vehicle
                         </label>
 
 
                         <label for="AllowCoupon?" class="input tooltip">
-                            <input type="checkbox" name="Additional" id="AllowCoupon?" disabled>
+                            <input type="checkbox" name="Allow Coupons" id="AllowCoupon?" disabled>
                             I want to allow the use of coupons
                             <span class="tooltiptext">
                                 Jim's Cars offers customers the opportunity to save money on the purchases of cars
@@ -335,33 +342,33 @@
 
             </form>
         </div>
+
+        <footer>
+            <ul id="footerLinks">
+                <li>
+                    <div id="copyrightStatement">
+                        &copy; Jim's Cars 2021 All Rights Reserved
+                    </div>
+                </li>
+
+                <li>
+                    <a href="../privacy-policy.html">Privacy Policy</a>
+                </li>
+
+                <li>
+                    <a href="../terms-and-conditions.html">Terms and Conditions</a>
+                </li>
+
+                <li>
+                    <a href="../contact-us.html">Contact Us</a>
+                </li>
+
+            </ul>
+            <address class="copyright">
+                Jaydon Cameron <br/>
+                <a href="mailto:C3329145@uon.edu.au">C3329145@uon.edu.au</a> <br/>
+                SENG1050 - Assignment 2
+            </address>
+        </footer>
     </body>
-
-    <footer>
-        <ul id="footerLinks">
-            <li>
-                <div id="copyrightStatement">
-                    &copy; Jim's Cars 2021 All Rights Reserved
-                </div>
-            </li>
-
-            <li>
-                <a href="../privacy-policy.html">Privacy Policy</a>
-            </li>
-
-            <li>
-                <a href="../terms-and-conditions.html">Terms and Conditions</a>
-            </li>
-
-            <li>
-                <a href="../contact-us.html">Contact Us</a>
-            </li>
-
-        </ul>
-        <address class="copyright">
-            Jaydon Cameron <br/>
-            <a href="mailto:C3329145@uon.edu.au">C3329145@uon.edu.au</a> <br/>
-            SENG1050 - Assignment 2
-        </address>
-    </footer>
 </html>

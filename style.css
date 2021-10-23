@@ -1,7 +1,8 @@
 /*      Filename:   style.css
         Author:     Jaydon Cameron
         Validator:  https://jigsaw.w3.org/css-validator/
-        Created:    03/09/2021      */
+        Created:    03/09/2021
+        Updated:    10/10/2021      */
 
 html {
     background-image: url(images/diego-jimenez-A-NVHPka9Rk-unsplash.jpg);
@@ -9,14 +10,13 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 100%;
     height: 100%;
 }
 
 /*          Top Navigation Bar          */
 header {
     background: #2F3136;    /* Set the background color of the header. */
-    margin: -1cm -1cm 0;
+    margin: -1cm -1cm 1cm;
 }
 
 /*  Creates empty space below the header, and removes it.
@@ -29,7 +29,7 @@ header::after {
 }
 
 .container {
-    width: available; /*  Set width to 80% of the window's size.  */
+    width: 90%; /*  Set width to 80% of the window's size.  */
     margin: 0 1cm;
 }
 
@@ -76,15 +76,15 @@ nav a:link {
 
 /*      Body        */
 body {
-    position: relative;
+    position: sticky;
     font-size: 14pt;
     color: white;
     font-family: "Work Sans", sans-serif;
     margin: 1cm;
     text-align: left;
-    width: available;
-    min-height: 100%;
+    width: auto;
     height: 100%;
+    min-height: 100%;
     overflow: scroll;
 }
 
@@ -130,7 +130,7 @@ input {
     border-radius: 5px;
     border: none;
     height: auto;
-    width: available;
+    width: auto;
     font-size: 12pt;
 }
 
@@ -165,17 +165,18 @@ input[type="text"] {
     font-size: x-large;
 }
 
+.push {
+    height: 100px;
+}
+
 /* Bottom of webpage */
 footer {
-    display: block;
-    position: relative;
-    width: available;
-    left: 0;
-    bottom: -15%;
-    right: 0;
+    position: sticky;
+    width: auto;
     font-size: 11pt;
     background-color: #2F3136;
-    margin: 1cm -1cm auto -1cm;
+    margin: 1cm -1cm 0 -1cm;
+    height: 100px;
 }
 
 #footerLinks {
@@ -184,13 +185,11 @@ footer {
     padding: 0;
     background-color: #2F3342;
     height: fit-content;
-    vertical-align: center;
 }
 
 #footerLinks li {
     font-size: 9pt;
     padding-top: 8px;
-    vertical-align: center;
     display: inline-block;
     margin-left: 1cm;
 }
@@ -220,12 +219,6 @@ a:link {
     color: white;
     font-weight: bolder;
     text-decoration: none;
-}
-
-
-
-.copyright{
-
 }
 
 #copyrightStatement {
@@ -270,4 +263,42 @@ main {
     background-color: #2F3136;
     border-radius: 10px;
     padding: 1cm;
+    min-height: 100%;
+}
+
+.showcase img {
+    border-radius: 10px;
+    height: auto;
+    width: 35%;                 /*  Set width of img to 40% of .showcase    */
+    float: left;                /*  Float img to the left of .showcase  */
+    margin-right: 1cm;          /*  Set the margin to 1cm from the right    */
+}
+
+.showcase ul li {
+    display: inline-block;
+    background-color: #2F3342;
+    margin-bottom: 1cm;
+    border-radius: 25px;
+    padding: 1%;
+    width: auto;
+    margin-left: -1cm;
+
+}
+
+.showcase a:visited {
+    color: darkviolet;          /*  Set the color of a to darkviolet. If a (link) has been visited. */
+}
+
+.showcase a:link {
+    color: aqua;                /*  Set the color of a to aqua. If a is a link. */
+}
+
+.showcase a:hover {
+    color: blue;                /*  Set the color of a to blue. If the cursor is over (or hovering) a.*/
+}
+
+.homepage {
+    border-radius: 10px;
+    padding: 1px 1cm;
+    background-color: #2F3136;  /*  Set background color of OurServices section using hex code  */
 }
